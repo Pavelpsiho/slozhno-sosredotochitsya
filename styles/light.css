@@ -10,3 +10,42 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+
+:root.theme_light {
+  --background-color:#fff1f7;
+  --main-text-color: #353430;
+  --background-image: url(../images/cover-image-light.png);
+  --title-color: #ffc2e6;
+  --title-shadow: #ff0070;
+  --title-decor: #FF8DCB;
+  --hover-decor: 1px solid rgba(50, 49, 45, 0.4);
+  --article-title-color: var(--main-text-color);
+  --section-title-color: var(--main-text-color);
+  --border-color: var(--title-color);
+  --link-shadow: var(--title-color);
+  --menu-color: var(--main-text-color);
+  --recording-color: var(--background-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme_light {
+    --background-color:#fff1f7;
+    --main-text-color: #353430;
+    --background-image: url(../images/cover-image-light.png);
+    --title-color: #ffc2e6;
+    --title-shadow: #ff0070;
+    --title-decor: #FF8DCB;
+    --hover-decor: 1px solid rgba(50, 49, 45, 0.4);
+    --article-title-color: var(--main-text-color);
+    --section-title-color: var(--main-text-color);
+    --border-color: var(--title-color);
+    --link-shadow: var(--title-color);
+    --menu-color: var(--main-text-color);
+    --recording-color: var(--background-color);
+  }
+}
+
+.page.theme-light .visual-element__recording {
+  display: none;
+}

@@ -1,5 +1,243 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import url('../fonts/fonts.css');
 
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  width: 1024px;
+  margin: auto;
+  background-color:#000028;
 }
+
+.nav_text {
+  position: absolute;
+  right: 25.7%;
+  top: 3.2%;
+  color: #FF0070;
+}
+/*точка*/
+.visual-element__recording {
+  position: absolute;
+  right: 24%;
+  top: 4%; 
+  transform: translateY(-50%); 
+  width: 12px; 
+  height: 12px; 
+  background-color: #FF0070;
+  border-radius: 50%; 
+  margin-right: 10px; 
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.visual-element__line {
+  position: absolute;
+  right: 24%;
+  top: 2.5%;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  /* transform: rotate(45deg); */
+  transform-origin: 0 0; 
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+}
+
+.visual-element__recording::before,
+.visual-element__recording::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.visual-element__recording::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  animation-delay: 0.3s; 
+}
+
+.visual-element__recording::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  animation-delay: 0.6s; 
+}
+
+@keyframes glow {
+  from {
+      transform: scale(1);
+      opacity: 1;
+  }
+  to {
+      transform: scale(1.5);
+      opacity: 0;
+  }
+}
+/*точка*/
+.header {
+  min-height: 768px;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container_title {
+  background-color: #FF0070;
+  color: #000028;
+}
+
+.title_main {
+  max-width: 315px;
+  font-family: "IBM Plex mono", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF0070;
+}
+
+.header_title{
+  font-family: "IBM Plex mono", sans-serif;
+  font-size: 157px;
+  margin: 278px 266px 113px 0;
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color:#DB00FF;
+  line-height: 129.53px;
+}
+
+.header_text {
+  background-color: #FF0070;
+  width: 491px;
+  height: 71px;
+  color: #000028;
+  font-size: 18px;
+  font-weight: 700;
+  float: right;
+  margin-right: 25px;
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  margin-block-start: 15px;
+  background-color: transparent;
+  border: none;
+  color: #FF0070;
+  font-size: 18px;
+  text-transform: lowercase;
+  padding: 0 13px 0 13px;
+}
+
+.header__theme-menu-list {
+  list-style-type: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  display: inline-block;
+}
+
+.first-section {
+  margin-block-start: 60px;
+}
+
+.first-section,.third-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-block-end: 80px;
+  gap: 10px;
+}
+
+.second-section {
+  margin-block-end: 80px;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-flow: row;
+}
+
+
+.section_gallery .section_img {
+  margin-block-start: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  grid-template-areas:
+        "sunset sunset ice-cream"
+        "tape books ice-cream"
+        "tape street street";
+}
+
+.section_gallery .section_img img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+.section_gallery {
+  background-color: #FF0070;
+  color: #000028;
+  margin-block-end: 20px;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream; 
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street; 
+}
+
+.container_title {
+  margin-block-end: 10px;
+}
+
+.container_text {
+  font-family: "IBM Plex mono", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-block-end: 20px;
+}
+
+.first-section_answers {
+  gap: 1px; 
+}
+
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-section_title {
+  width: 100%;
+  text-align: center;
+}
+
+.answers-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.answers-list li {
+  margin-bottom: 20px;
+}
+
+

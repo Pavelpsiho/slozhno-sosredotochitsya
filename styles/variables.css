@@ -2,3 +2,20 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  font-family: "IBM Plex Mono", sans-serif;
+  --background-color:#000028;
+  --main-text-color: #f1b2ce;
+  --background-image: url(../images/cover-image-dack.png);
+  --title-color: #db00ff;
+  --title-shadow: #ff0070;
+  --title-decor: var(--title-shadow);
+  --hover-decor: 1px solid rgba(255, 0, 112, 0.4);
+  --article-title-color: var(--background-color);
+  --section-title-color: var(--title-shadow);
+  --border-color: var(--main-text-color);
+  --link-shadow: var(--title-color);
+  --menu-color: var(--title-shadow);
+  --recording-color: var(--title-shadow);
+}
