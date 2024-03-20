@@ -36,7 +36,13 @@ picture {
 button,
 a {
   color: currentColor;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-decoration: none;
+}
+
+span {
+  outline: none;
 }
