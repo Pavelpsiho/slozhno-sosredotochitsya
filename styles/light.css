@@ -3,7 +3,8 @@
   --main-text-color: #353430;
   --background-image: url('../images/cover-image-light.png');
   --title-color: #ffc2e6;
-  --title-shadow: #ff0070;
+  /* --title-shadow: #ff0070; */
+  --title-shadow:#FF8DCB;
   --title-decor: #FF8DCB;
   --hover-decor: 1px solid rgba(50, 49, 45, 0.4);
   --article-title-color: var(--main-text-color);
