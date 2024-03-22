@@ -49,7 +49,7 @@
 
 .title_main {
   max-width: 315px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace, sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--menu-color);
@@ -99,7 +99,7 @@
 }
 
 .grand_title {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono",  monospace, sans-serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--title-shadow);
@@ -117,7 +117,7 @@
 
 a {
   outline: none;
-  text-shadow: 2px 2px 0 var(--title-shadow);
+  text-shadow: 2px 2px 0 var(--recording-color);
 }
 
 a:focus-visible {
@@ -133,6 +133,7 @@ a:focus-visible {
   font-weight: 700;
   justify-self: end;
   margin-bottom: 15px;
+  /* white-space: pre-line; */
 }
 
 .header__theme-menu {
@@ -157,7 +158,7 @@ a:focus-visible {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-color);
+  outline: var(--hover-decor);
 }
 
 .link:hover {
@@ -168,7 +169,6 @@ a:focus-visible {
 .header__theme-menu-list {
   list-style-type: none;
   padding: 0;
-  /* gap: 10px; */
 }
 
 .header__theme-menu-item {
@@ -176,26 +176,31 @@ a:focus-visible {
 }
 
 .about-section {
-  margin-block-start: 5px;
+  /* margin-block-start: 5px; */
   margin-inline: 20px;
-  margin-block-end: 60px;
+  margin-block-end: 80px;
 
+}
+
+.advice_table {
+  display: grid;
+  gap: 21px;
 }
 
 .adviсe-section {
   margin-inline: 20px;
-  margin-block-end: 62px;
+  margin-block-end: 80px;
 }
 
 .about-section,
 .adviсe-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px;
+  gap: 10px;  /*10 стояло*/
 }
 
 .concentration-section {
-  margin-block-end: 40px;
+  margin-block-end: 61px;
   grid-template-columns: 1fr 3fr;
   grid-auto-flow: row;
   margin-inline: 20px;
@@ -262,9 +267,9 @@ a:focus-visible {
 }
 
 .container_title {
-  margin-block-end: 10px;
+  /* margin-block-end: 10px; */
   font-weight: 700;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace, sans-serif;
   font-size: 18px;
 
 }
@@ -276,28 +281,30 @@ a:focus-visible {
 
 
 .container_text {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 400;
   color: var(--main-text-color);
   font-size: 18px;
   line-height: 23.4px;
-  margin-block-end: 20px;
+  /* margin-block-end: 20px; */
 }
 
 
 .about-section_answers {
-  gap: 1px;
+  display: grid;
+  gap: 20px;
 }
 
 
 .concentration-section {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .concentration-section_title {
   width: 100%;
-  margin-block-end: 21px;
+  /* margin-block-end: 21px; */
 }
 
 .answers-list {
@@ -319,9 +326,7 @@ a:focus-visible {
 }
 
 .footer {
-  /* max-width: 984px; */
   height: 100vh;
-  /* min-height: 768px; */
   position: relative;
   display: grid;
   justify-content: center;
@@ -333,81 +338,62 @@ a:focus-visible {
   margin-left: 0;
 }
 
+article:last-child {
+    margin-bottom: 0;
+}
 
-@media screen and (max-width: 767px) {
+article {
+  display: grid;
+  gap: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
   .page {
     max-width: 786px;
   }
-
-  
   .header_text {
     max-width: 364px;
-    /* min-height: 117px; */
-    margin-inline-start: 384px;
-    margin-block-end: 187px;
+    margin-bottom: 10px;
   }
 
-  .header_title {
-    margin-block-start: 154px;
-    margin-block-end: 145px;
-    font-size: 120px;
+  .container_title_upper {
+    margin-bottom: 22px;
   }
 
-  .container_text {
-    margin-block-end: 22px;
-  }
-
-  .concentration-section {
-    margin-block-end: 58px;
-  }
-
-  .adviсe-section {
+  .about-section,.adviсe-section {
     gap: 20px;
-    margin-block-end: 51px;
   }
-
   .answers-list {
     display: block;
   }
+
+  /* .advice_table {
+    margin-bottom: 20px;
+  } */
 
   .concentration-section_title {
     max-width: 236px;
   }
 
-  .container_title_upper {
-    margin-block-end: 17px;
-  }
-
-  .about-section {
-    gap: 20px;
-    margin-block-end: 58px;
-    margin-block-start: 56px;
-  }
+  /* .about-section {
+    margin-block-end: 60px;
+  } */
 
   .header__theme-menu {
-    display: grid;
     justify-content: end;
-    margin-inline-end: 21px;
-    margin-top: 165px;
+    align-self: center;
   }
 
   .header__theme-menu-list {
     display: grid;
-    gap: 0;
+    gap: 10px;
   }
 
   .section_gallery {
-    margin-block-end: 47px;
+    margin-block-end: 63px;
   }
 
-  footer .header_title {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-  }
-
-  .footer_title {
-    padding: 462px 204px;
-  }
 
   .sunset {
     width: 479px;
@@ -437,38 +423,32 @@ a:focus-visible {
 }
 
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
   .page {
     max-width: 375px;
   }
 
   .header {
     padding: 10px;
+    gap: 10px;
+    margin-block-end: 40px;
   }
 
-  .page h1 {
-    font-size: 116px;
-    margin: 0;
+  .grand_title {
+    margin-left: 0px;
     line-height: 95.7px;
-    margin-inline-start: 10px;
-    margin-block-start: 68px;
-    margin-block-end: 55px;
   }
 
   .header_text {
     max-width: 355px;
-    /* min-height: 117px; */
     font-size: 18px;
-    margin-right: 37px;
-    margin-block-end: 80px;
-    margin-inline: 10px;
+    justify-self: center;
   }
 
   .about-section {
     display: block;
-    margin-block-start: 26px;
-    margin-inline: 10px;
     margin-block-end: 50px;
+    margin-inline: 10px;
   }
 
   .about-section_answers {
@@ -481,6 +461,11 @@ a:focus-visible {
     margin-block-end: 51px;
   }
 
+  .concentration-section_title {
+    max-width: max-content;
+    margin-bottom: 22px;
+  }
+
   .answers-list {
     display: block;
   }
@@ -488,7 +473,7 @@ a:focus-visible {
   .adviсe-section {
     display: block;
     margin-inline: 10px;
-    margin-block-end: 21px;
+    margin-block-end: 46px;
   }
 
   .adviсe-section_title {
@@ -498,14 +483,10 @@ a:focus-visible {
 
   .section_gallery {
     margin-inline: 10px;
-    margin-block-start: 52px;
+    /* margin-block-start: 52px; */
     margin-block-end: 40px;
   }
 
-  .nav_text {
-    right: 40px;
-    top: 12px;
-  }
 
   .header::before,
   .footer::before {
@@ -515,10 +496,12 @@ a:focus-visible {
 
   .header::after {
     left: -9px;
+    bottom: -10px;
   }
 
   .footer::after {
-    left: 1px;
+    left: -10px;
+    bottom: -3px;
 
   }
 
@@ -533,6 +516,17 @@ a:focus-visible {
       "street";
   }
 
+  .header__theme-menu::after {
+    right: 39px;
+    top: 12px;
+  }
+
+  .header__theme-menu::before {
+    right: 8px;
+    top: 23px;
+  }
+
+
   .section_gallery_title {
     margin-block-end: 10px;
   }
@@ -545,17 +539,11 @@ a:focus-visible {
   .header__theme-menu {
     display: grid;
     justify-content: end;
-    margin-inline-end: 10px;
-    margin-block-start: 72px;
   }
 
   .header__theme-menu-list {
     display: grid;
     gap: 9px;
-  }
-
-  .footer_title {
-    padding: 271px 14px;
   }
 
   .sunset {
