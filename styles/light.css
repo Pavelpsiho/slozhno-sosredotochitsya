@@ -15,8 +15,8 @@
 
 }
 
-@media (prefers-color-scheme: light) {
-  :root .theme_light {
+@media (prefers-color-scheme:light) {
+  :root  {
     --background-color: #fff1f7;
     --main-text-color: #353430;
     --background-image: url('../images/cover-image-light.png');
@@ -29,8 +29,17 @@
     --border-color: var(--title-color);
     --link-shadow: var(--title-color);
     --menu-color: var(--main-text-color);
-    --recording-color: var(--title-decor);
+    --recording-color: var(--title-decor); 
   }
+
+  .header__theme-menu::after {
+    display: none;
+  }
+  
+  .header__theme-menu::before {
+    display: none;
+  }
+ 
 }
 
 .page.theme_light .header__theme-menu::after {
