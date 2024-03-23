@@ -31,21 +31,12 @@
     --menu-color: var(--main-text-color);
     --recording-color: var(--title-decor); 
   }
-
-  .header__theme-menu::after {
-    display: none;
+  .header_rec {
+    visibility: hidden;
   }
-  
-  .header__theme-menu::before {
-    display: none;
-  }
- 
-}
+} 
 
-.page.theme_light .header__theme-menu::after {
-  display: none;
-}
 
-.page.theme_light .header__theme-menu::before {
-  display: none;
+.page.theme_light .header_rec {
+  visibility: hidden;
 }

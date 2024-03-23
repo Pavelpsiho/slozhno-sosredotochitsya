@@ -13,4 +13,5 @@
   --link-shadow: var(--title-color);
   --menu-color: var(--title-shadow);
   --recording-color: var(--title-shadow);
+  --padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }

@@ -14,10 +14,9 @@
   --recording-color: var(--title-shadow);
 }
 
-.page.theme_dark .header__theme-menu::before  {
-  content: '';
+.theme_dark .header_rec {
+  visibility: visible;
 }
-
 
 @media (prefers-color-scheme:dark) {
   :root {
