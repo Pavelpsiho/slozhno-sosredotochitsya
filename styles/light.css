@@ -33,10 +33,10 @@
   }
 }
 
-.page.theme_light .visual-element__recording {
+.page.theme_light .header__theme-menu::after {
   display: none;
 }
 
-.page.theme_light .nav_text {
-  color: var(--background-color);
+.page.theme_light .header__theme-menu::before {
+  display: none;
 }
