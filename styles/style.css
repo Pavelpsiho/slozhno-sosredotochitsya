@@ -125,11 +125,11 @@ h3 {
 
 a {
   outline: none;
-  text-shadow: 2px 2px 0 var(--recording-color);
+  text-shadow: 2px 2px 0 var(--recording-color); 
 }
 
 a:focus-visible {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--border-link); /*border-color*/
 }
 
 .header_text {
@@ -173,7 +173,7 @@ article .answers-list {
 
 .link:hover {
   outline: none;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-link); /*border-color*/
 }
 
 .header__theme-menu-list {
