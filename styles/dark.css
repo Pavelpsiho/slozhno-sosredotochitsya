@@ -34,6 +34,7 @@
     --link-shadow: var(--title-color);
     --menu-color: var(--title-shadow);
     --recording-color: var(--title-shadow);
+    --border-link: var(--main-text-color);
   }
  
 }
