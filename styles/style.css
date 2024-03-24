@@ -518,6 +518,7 @@ article {
   .advice_table {
     gap: 21px;
   }
+
   .section_gallery {
     display: grid;
     margin-block-end: 40px;
